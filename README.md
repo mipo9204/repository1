@@ -2,4 +2,4 @@
 
 Hello 
 
-I am Ari, and this embedded systems class stresses me out
+I am Ari, and this is my repository that I've created. 
