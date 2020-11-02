@@ -37,5 +37,10 @@ void loop() {
 }
 //enable interrupts
 __enable_interrupt();
-//clear interrupts
-//port -> I'm actually not sure &= ~interrupt flag name; //clear interrupt flag
+
+//check and clear interrupts
+//if(peripheral-> I'm actually not sure & flag(meaning flag is high)) //check flag
+    {
+        //peripheral -> I'm actually not sure again  &= ~flag(makes flag low); //clear interrupt flag
+        //activate servo stuffs
+    }
