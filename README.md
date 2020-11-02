@@ -1,5 +1,2 @@
-# repository1
-
-Hello 
-
-I am Ari, and this is my repository that I've created. this is edit 3 
+# repository1 very bad pseudo code for the ultrasonic stuff
+main for the repository
