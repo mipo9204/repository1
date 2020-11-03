@@ -1,46 +1,32 @@
+//Timer A interrupt triggers ultrasonic
 #include "msp.h"
+#include <stdint.h>
 
+//set variables for distance calculation
+int miliseconds = 0;
+int distance = 0;
 
-/**
- * main.c
- */
-void main(void)
+//send distance command to sensor
+    //receive raw data from ultrasonic
+    //do calculation to convert to (whatever metric of measurement we're using)
+
+//get distance back
+    //get modified distance from distance command
+
+//check results
+    //compare to set #
+
+//in a loop (if object distance is below a certain #)
+    //avoid function
+
+//clear interrupt flag
+
+//cycle back to moving state
+
+//IRQ handlers
+void TA0_0_IRQHandler(void)
 {
-	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
-
-//attach TX to Echo
-//attach RX to Trig
-
-// defines variables for measurement
-// variable for the duration of sound wave travel
-// variable for the distance measurement
+    //    Interrupt gets triggered for every clock cycle in SMCLK Mode counting number of pulses
+    miliseconds++;
+    TIMER_A0->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
 }
-
-//setup for ultra-sonic
-void setup() {
-  //pinMode(trig, OUTPUT); // Sets TRIG as an OUTPUT
-  //pinMode(echo, INPUT); // Sets ECHO as an INPUT
-}
-//loop for determining distance
-void loop() {
-  // Clears the trigPin condition
-  //digitalWrite(trigPin, LOW);
-  //delayMicroseconds(2);
-  // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
-  //digitalWrite(trigPin, HIGH);
-  //delayMicroseconds(10);
-  //digitalWrite(trig, LOW);
-  // Reads the echoPin, returns the sound wave travel time in microseconds
-  //duration = pulseIn(echo, HIGH);
-  // Calculating the distance
-  //distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
-}
-//enable interrupts
-__enable_interrupt();
-
-//check and clear interrupts
-//if(peripheral-> I'm actually not sure & flag(meaning flag is high)) //check flag
-    {
-        //peripheral -> I'm actually not sure again  &= ~flag(makes flag low); //clear interrupt flag
-        //activate servo stuffs
-    }
